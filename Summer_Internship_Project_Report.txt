@@ -1,0 +1,106 @@
+1. Abstract
+Sentiment Analysis is a Natural Language Processing technique used to identify the emotional tone of text. In this project, a simple sentiment analysis system is developed to classify product reviews into Positive and Negative categories. The project applies text cleaning, tokenization, stopword removal, lemmatization and TF-IDF feature extraction. Three machine learning algorithms—Naive Bayes, Logistic Regression and Linear Support Vector Machine—are trained and compared. The performance is evaluated using accuracy, precision, recall and F1-score.
+
+2. Introduction
+Product reviews contain useful information about customer opinions and experiences. Manually analyzing a large number of reviews is time-consuming. Sentiment analysis automates this process by converting textual reviews into useful features and predicting their sentiment. This project demonstrates a basic end-to-end Natural Language Processing and machine learning workflow.
+
+3. Objectives
+• Understand the basic Natural Language Processing workflow.
+• Clean and preprocess product review text.
+• Perform tokenization, stopword removal and lemmatization.
+• Convert text into numerical features using TF-IDF.
+• Train machine learning models for sentiment classification.
+• Compare model performance using standard evaluation metrics.
+• Predict the sentiment of a new product review.
+
+4. Technologies Used
+• Python
+• Pandas
+• NLTK
+• Scikit-learn
+• Matplotlib
+• TF-IDF
+• Naive Bayes
+• Logistic Regression
+• Linear SVM
+• Jupyter Notebook / VS Code
+
+5. Dataset
+A public labeled product-review dataset is used for the experiment. The project selects 250 Positive and 250 Negative reviews, giving 500 initial records. Two duplicate records are removed during dataset checking, resulting in a final dataset of 498 reviews: 248 Positive and 250 Negative. The dataset contains two project fields: Review and Sentiment.
+
+6. Methodology
+Data Collection: Load a labeled product-review dataset.
+Data Cleaning: Convert text to lowercase and remove unnecessary characters and extra spaces.
+Tokenization: Split each review into individual words or tokens.
+Stopword Removal: Remove common words that provide little useful information while preserving important negative words.
+Lemmatization: Reduce words to their basic dictionary form.
+TF-IDF: Convert processed text into numerical feature vectors.
+Train-Test Split: Divide the data into training and testing portions using an 80/20 stratified split.
+Model Training: Train Naive Bayes, Logistic Regression and Linear SVM models.
+Evaluation: Compare the models using accuracy, precision, recall and F1-score.
+Prediction: Use the trained models to classify new reviews.
+
+7. Text Preprocessing
+Text preprocessing is an important stage because raw text contains unnecessary information. The project first converts reviews to lowercase. It then removes non-alphabetic characters and extra spaces. Tokenization separates the text into words. Stopwords are removed using the English stopword list available in NLTK, while important negative words such as not, no and never are retained. Finally, lemmatization converts words to their basic forms.
+
+8. TF-IDF Feature Extraction
+TF-IDF stands for Term Frequency-Inverse Document Frequency. It represents text numerically by assigning higher importance to words that are useful for distinguishing documents. The resulting numerical matrix is supplied to the machine learning algorithms. The TF-IDF vectorizer uses unigram and bigram features.
+
+9. Machine Learning Models
+Naive Bayes: A probabilistic classification algorithm commonly used for text classification.
+Logistic Regression: A linear classification algorithm used for binary classification.
+Linear SVM: A linear Support Vector Machine that finds a decision boundary between classes.
+
+10. Evaluation Metrics
+Accuracy: The proportion of correctly classified reviews.
+Precision: Measures how many reviews predicted as a particular class are actually from that class.
+Recall: Measures how many reviews belonging to a class are correctly identified.
+F1-score: The harmonic mean of precision and recall.
+Confusion Matrix: Shows the counts of correct and incorrect predictions for each class.
+
+11. Results
+The final experiment uses 498 reviews after duplicate removal. The dataset is divided into 398 training reviews and 100 testing reviews using stratified sampling.
+
+Model Accuracy:
+• Naive Bayes: 74%
+• Logistic Regression: 77%
+• Linear SVM: 80%
+
+Linear SVM is the best-performing model in this experiment. Its classification report gives 0.80 precision, 0.80 recall and 0.80 F1-score for both Positive and Negative classes, with 50 test reviews in each class.
+
+12. Project Output
+• Positive or Negative prediction for a review.
+• Accuracy comparison between the three machine learning models.
+• Classification report containing precision, recall and F1-score.
+• Confusion matrix for Linear SVM.
+• Prediction of sentiment for new reviews.
+
+13. Advantages
+• Simple and easy-to-understand NLP pipeline.
+• Uses commonly available Python libraries.
+• Multiple machine learning models can be compared.
+• Includes standard evaluation metrics.
+• Can be used for automatic review classification.
+
+14. Limitations
+• Only Positive and Negative classes are considered.
+• Performance depends on the quality and size of the training data.
+• Traditional machine learning may not handle sarcasm or complex language accurately.
+• The dataset is limited in size for a real-world production system.
+
+15. Future Scope
+• Use a much larger labeled review dataset.
+• Add a Neutral sentiment class.
+• Experiment with advanced deep learning and transformer-based models.
+• Develop a simple web interface for real-time sentiment prediction.
+
+16. Conclusion
+This project demonstrates a complete and simple sentiment analysis pipeline using Natural Language Processing and machine learning. The reviews are cleaned and processed through tokenization, stopword removal and lemmatization. TF-IDF is then used to convert the text into numerical features. Naive Bayes, Logistic Regression and Linear SVM are trained for classification and their performance is evaluated using standard metrics. Among the tested models, Linear SVM achieved the best accuracy of 80%. The project provides practical understanding of NLP preprocessing, feature extraction, machine learning classification and evaluation.
+
+17. Learning Outcomes
+• Understanding of basic Natural Language Processing.
+• Practical use of Python for text analysis.
+• Understanding of TF-IDF feature extraction.
+• Experience with machine learning classification.
+• Understanding of model evaluation metrics.
+• Experience in building an end-to-end mini project.
